@@ -133,7 +133,7 @@ export default function Projects() {
               project.link.startsWith("http");
 
             const cardClass =
-              "group relative block w-full max-w-2xl cursor-pointer justify-self-center overflow-hidden rounded-[1.5rem] border border-foreground/10 bg-card text-left shadow-sm no-underline transition-[box-shadow,border-color,transform] duration-300 sm:rounded-[1.65rem] lg:max-w-none lg:justify-self-stretch hover:border-accent/25 hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+              "group relative flex h-full min-h-0 w-full max-w-2xl cursor-pointer flex-col justify-self-center overflow-hidden rounded-[1.5rem] border border-foreground/10 bg-card text-left shadow-sm no-underline transition-[box-shadow,border-color,transform] duration-300 sm:rounded-[1.65rem] lg:max-w-none lg:justify-self-stretch hover:border-accent/25 hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
             const motionProps = {
               initial: { opacity: 0, y: 36 },
@@ -150,8 +150,8 @@ export default function Projects() {
             };
 
             const inner = (
-              <div className="flex flex-col gap-3.5 p-4 sm:gap-4 sm:p-5 md:p-6">
-                <div className="group/media relative aspect-[2/1] w-full min-h-[180px] overflow-hidden rounded-xl border border-foreground/10 bg-elevated sm:min-h-[222px] sm:rounded-2xl sm:aspect-[21/8] lg:aspect-[11/4] lg:min-h-[238px]">
+              <div className="flex h-full min-h-0 flex-1 flex-col gap-3.5 p-4 sm:gap-4 sm:p-5 md:p-6">
+                <div className="group/media relative aspect-[2/1] w-full min-h-[180px] shrink-0 overflow-hidden rounded-xl border border-foreground/10 bg-elevated sm:min-h-[222px] sm:rounded-2xl sm:aspect-[21/8] lg:aspect-[11/4] lg:min-h-[238px]">
                   <span className="absolute left-3 top-3 z-10 rounded-full border border-accent/25 bg-card/90 px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-accent shadow-sm backdrop-blur-sm sm:left-4 sm:top-4 sm:px-3.5 sm:py-2 sm:text-[13px]">
                     {project.tag}
                   </span>
@@ -160,7 +160,7 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="relative min-h-[5.25rem] pr-14 sm:min-h-[5.5rem] sm:pr-16">
+                <div className="flex min-h-0 flex-1 flex-col">
                   <h3
                     id={`project-title-${project.id}`}
                     className="text-xl font-bold tracking-tight text-foreground sm:text-[1.375rem] lg:text-[26px]"
@@ -170,12 +170,14 @@ export default function Projects() {
                   <p className="mt-2 text-base leading-relaxed text-muted sm:text-[1.0625rem] lg:text-lg">
                     {project.description}
                   </p>
-                  <span
-                    className="pointer-events-none absolute bottom-0 right-0 inline-flex h-11 w-11 items-center justify-center rounded-full border border-foreground/15 bg-surface text-accent shadow-md transition-colors group-hover:border-accent/45 group-hover:bg-accent/15 group-hover:text-accent-bright sm:h-12 sm:w-12"
-                    aria-hidden
-                  >
-                    <TbArrowUpRight className="h-6 w-6" strokeWidth={1.75} />
-                  </span>
+                  <div className="mt-auto flex justify-end pt-3 sm:pt-4">
+                    <span
+                      className="pointer-events-none inline-flex h-11 w-11 items-center justify-center rounded-full border border-foreground/15 bg-surface text-accent shadow-md transition-colors group-hover:border-accent/45 group-hover:bg-accent/15 group-hover:text-accent-bright sm:h-12 sm:w-12"
+                      aria-hidden
+                    >
+                      <TbArrowUpRight className="h-6 w-6" strokeWidth={1.75} />
+                    </span>
+                  </div>
                 </div>
               </div>
             );
