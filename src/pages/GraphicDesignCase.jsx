@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ProjectCaseHeader from "../components/project-detail/ProjectCaseHeader";
+import { publicAsset } from "../utils/publicAsset";
 import CustomCursor from "../utils/CursorAnimation";
 
 const sectionBase =
@@ -38,7 +39,7 @@ export default function GraphicDesignCase() {
             className="mt-10 overflow-hidden rounded-2xl border border-white/10 bg-[#0c1010] shadow-[0_24px_80px_-20px_rgba(0,0,0,0.65)] sm:mt-12 sm:rounded-[1.35rem]"
           >
             <img
-              src="/assets/graphic-design-project.png"
+              src={publicAsset("/assets/graphic-design-project.png")}
               alt="Graphic design work shown across tablet, phone, and laptop mockups"
               className="h-auto w-full object-cover"
               width={1200}

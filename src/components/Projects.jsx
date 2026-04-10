@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { publicAsset } from "../utils/publicAsset";
 import { TbArrowUpRight } from "react-icons/tb";
 import { motion } from "framer-motion";
 
@@ -12,7 +13,7 @@ const projects = [
     title: "zaibatsutechnology",
     description:
       "A UK-based agency that offers bespoke AI & Digital Solutions with over 5+ years of driving business growth with the help of development & marketing solutions.",
-    image: "/assets/zaibatsu-project.png",
+    image: publicAsset("/assets/zaibatsu-project.png"),
     link: "https://zaibatsutechnology.co.uk/",
     tag: "Website Design",
   },
@@ -21,7 +22,7 @@ const projects = [
     title: "Trailx5",
     description:
       "As a top digital marketing company, we craft customized strategies designed to boost your ROI while enhancing your brand’s growth and visibility.",
-    image: "/assets/trailx5-project.png",
+    image: publicAsset("/assets/trailx5-project.png"),
     link: "https://trailx5.com/",
     tag: "Website Design",
   },
@@ -30,7 +31,7 @@ const projects = [
     title: "rupiya.app",
     description:
       "Rupiya.app helps farmers with tools like satellite monitoring, soil testing, and expert guidance. It also offers easy access to agricultural loans for growth.",
-    image: "/assets/rupiya-project.jpg",
+    image: publicAsset("/assets/rupiya-project.jpg"),
     link: "https://rupiya.app/",
     tag: "Website Design",
   },
@@ -39,7 +40,7 @@ const projects = [
     title: "Graphic Design Projects",
     description:
       "I design banners, posters, logos, and reels that communicate ideas and strengthen brand identity.",
-    image: "/assets/graphic-design-project.png",
+    image: publicAsset("/assets/graphic-design-project.png"),
     internalPath: "/work/graphic-design",
     tag: "Graphic Design",
   },

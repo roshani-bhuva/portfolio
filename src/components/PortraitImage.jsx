@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { publicAsset } from "../utils/publicAsset";
 
 /**
  * Shared hero/about portrait — same asset and max dimensions everywhere.
@@ -20,7 +21,7 @@ export default function PortraitImage({ className = "", compact = false }) {
       <div className={[aboutCropFrame, className].filter(Boolean).join(" ")}>
         <img
           className={aboutCropImage}
-          src="/assets/hero-portrait.png"
+          src={publicAsset("/assets/hero-portrait.png")}
           alt="Designer portrait"
         />
       </div>
@@ -30,7 +31,7 @@ export default function PortraitImage({ className = "", compact = false }) {
   return (
     <img
       className={[portraitImageClassName, className].filter(Boolean).join(" ")}
-      src="/assets/hero-portrait.png"
+      src={publicAsset("/assets/hero-portrait.png")}
       alt="Designer portrait"
     />
   );

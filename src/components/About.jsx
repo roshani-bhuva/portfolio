@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { SiOpenai, SiAdobexd } from "react-icons/si";
 import PortraitImage from "./PortraitImage";
+import { publicAsset } from "../utils/publicAsset";
 
 const STATS = [
   { value: "2+", label: "Years of Experience" },
@@ -15,7 +16,7 @@ const EXPERIENCE = [
     company: "Axire Infotech",
     location: "Ahmedabad, Gujarat",
     period: "April 2025 – Present",
-    logo: "/assets/experience/axire-infotech.png",
+    logo: publicAsset("/assets/experience/axire-infotech.png"),
   },
   {
     id: 2,
@@ -23,7 +24,7 @@ const EXPERIENCE = [
     company: "Rupiya Finnovations Private Limited",
     location: "Ahmedabad, Gujarat",
     period: "Mar 2024 – Mar 2025",
-    logo: "/assets/experience/rupiya-finnovations.png",
+    logo: publicAsset("/assets/experience/rupiya-finnovations.png"),
   },
   {
     id: 3,
@@ -31,44 +32,44 @@ const EXPERIENCE = [
     company: "HIR Infotech Pvt Ltd (Brandsnap)",
     location: "Ahmedabad, Gujarat",
     period: "Oct 2023 – Mar 2024",
-    logo: "/assets/experience/hir-infotech.png",
+    logo: publicAsset("/assets/experience/hir-infotech.png"),
   },
 ];
 
 const TOOLS = [
   {
     name: "Figma",
-    logo: "/assets/tools/figma.png",
+    logo: publicAsset("/assets/tools/figma.png"),
     cardClass:
       "rounded-xl border-[#A259FF]/30 bg-[#A259FF]/[0.12] hover:border-[#A259FF]/45",
   },
   {
     name: "Illustrator",
-    logo: "/assets/tools/illustrator.png",
+    logo: publicAsset("/assets/tools/illustrator.png"),
     cardClass:
       "rounded-xl border-[#FF9A00]/30 bg-[#FF9A00]/[0.12] hover:border-[#FF9A00]/45",
   },
   {
     name: "Photoshop",
-    logo: "/assets/tools/photoshop.png",
+    logo: publicAsset("/assets/tools/photoshop.png"),
     cardClass:
       "rounded-xl border-[#31A8FF]/30 bg-[#31A8FF]/[0.12] hover:border-[#31A8FF]/45",
   },
   {
     name: "Canva",
-    logo: "/assets/tools/canva.png",
+    logo: publicAsset("/assets/tools/canva.png"),
     cardClass:
       "rounded-xl border-[#00C4CC]/30 bg-[#00C4CC]/[0.12] hover:border-[#00C4CC]/45",
   },
   {
     name: "Lovable",
-    logo: "/assets/tools/lovable.png",
+    logo: publicAsset("/assets/tools/lovable.png"),
     cardClass:
       "rounded-xl border-[#F472B6]/30 bg-[#F472B6]/[0.12] hover:border-[#F472B6]/45",
   },
   {
     name: "Claude",
-    logo: "/assets/tools/claude.png",
+    logo: publicAsset("/assets/tools/claude.png"),
     cardClass:
       "rounded-xl border-[#D97757]/30 bg-[#D97757]/[0.12] hover:border-[#D97757]/45",
   },
@@ -88,7 +89,7 @@ const TOOLS = [
   },
   {
     name: "Copilot",
-    logo: "/assets/tools/copilot.png",
+    logo: publicAsset("/assets/tools/copilot.png"),
     logoClassName: "rounded-xl",
     cardClass:
       "border-[#6366f1]/30 bg-[#6366f1]/[0.1] hover:border-[#6366f1]/45",

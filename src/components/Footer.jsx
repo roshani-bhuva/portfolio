@@ -4,8 +4,8 @@ import { TbArrowUp } from "react-icons/tb";
 const SCROLL_OFFSET = 96;
 
 const FOOTER_LINKS = [
-  { id: "about", label: "About" },
   { id: "what-i-do", label: "What I do" },
+  { id: "about", label: "About" },
   { id: "projects", label: "Work" },
   { id: "contact", label: "Connect" },
 ];
@@ -62,7 +62,11 @@ export default function Footer() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.45, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.45,
+              delay: 0.05,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             aria-label="Footer"
             className="flex flex-col gap-4 lg:items-end"
           >
@@ -88,7 +92,10 @@ export default function Footer() {
         <div className="mt-10 flex flex-col gap-6 border-t border-foreground/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-1 text-sm">
             <p className="font-medium text-foreground/90">Roshani Bhuva</p>
-            <p className="text-muted">© {new Date().getFullYear()} Personal Portfolio. All rights reserved.</p>
+            <p className="text-muted">
+              © {new Date().getFullYear()} Personal Portfolio. All rights
+              reserved.
+            </p>
           </div>
 
           <button
@@ -97,7 +104,10 @@ export default function Footer() {
             className="group inline-flex items-center gap-2 self-start rounded-full border border-foreground/15 bg-foreground/[0.03] px-4 py-2.5 text-xs font-medium text-muted transition hover:border-accent/40 hover:text-accent sm:self-auto"
           >
             <span>Back to top</span>
-            <TbArrowUp className="h-4 w-4 transition group-hover:-translate-y-0.5" aria-hidden />
+            <TbArrowUp
+              className="h-4 w-4 transition group-hover:-translate-y-0.5"
+              aria-hidden
+            />
           </button>
         </div>
       </div>

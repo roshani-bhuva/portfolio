@@ -13,8 +13,8 @@ export default function PortfolioHome() {
       <CustomCursor />
       <Navbar />
       <Home />
-      <About />
       <WhatIDo />
+      <About />
       <Projects />
       <Contact />
       <Footer />

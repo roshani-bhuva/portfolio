@@ -10,8 +10,8 @@ import {
 import { applyTheme } from "../utils/theme";
 
 const NAV_LINKS = [
-  { id: "about", label: "About Me" },
   { id: "what-i-do", label: "What I Do" },
+  { id: "about", label: "About Me" },
   { id: "projects", label: "Work" },
   { id: "contact", label: "Connect" },
 ];

@@ -69,7 +69,7 @@ export default function Home() {
                 Discover My Work
               </motion.a>
               <motion.a
-                href="/Roshani_Bhuva_Resume.pdf"
+                href={`${import.meta.env.BASE_URL}Roshani_Bhuva_Resume.pdf`}
                 download="Roshani_Bhuva_Resume.pdf"
                 className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-accent bg-transparent px-5 py-3.5 text-base font-semibold text-foreground transition hover:bg-accent/10 sm:px-6"
                 whileHover={{ scale: 1.02 }}
