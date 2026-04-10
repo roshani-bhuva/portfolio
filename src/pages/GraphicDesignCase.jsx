@@ -259,7 +259,7 @@ export default function GraphicDesignCase() {
 
           <div className="mt-10 overflow-hidden rounded-2xl border border-foreground/10 bg-card shadow-[0_20px_50px_-24px_rgba(0,0,0,0.12)] sm:mt-12 sm:rounded-[1.35rem] dark:shadow-[0_24px_80px_-20px_rgba(0,0,0,0.65)]">
             <img
-              src={publicAsset("/assets/graphic-design-project.gif")}
+              src={publicAsset("/assets/graphic-design-project.png")}
               alt="Graphic design work shown across tablet, phone, and laptop mockups"
               className="h-auto w-full object-cover"
               width={1200}

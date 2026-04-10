@@ -40,7 +40,7 @@ const projects = [
     title: "Graphic Design Projects",
     description:
       "I design banners, posters, logos, and reels that communicate ideas and strengthen brand identity.",
-    image: publicAsset("/assets/graphic-design-project.gif"),
+    image: publicAsset("/assets/graphic-design-project.png"),
     internalPath: "/work/graphic-design",
     tag: "Graphic Design",
   },
