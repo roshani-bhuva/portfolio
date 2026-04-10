@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function () {
+        try {
+          var k = "portfolio-theme";
+          var s = localStorage.getItem(k);
+          var dark = s !== "light";
+          document.documentElement.classList.toggle("dark", dark);
+        } catch (e) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Roshani Bhuva | Portfolio</title>
+    <meta
+      name="description"
+      content="Roshani Bhuva — portfolio showcasing projects, skills, and experience."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/portfolio/assets/favicon.svg" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <meta id="theme-color-meta" name="theme-color" content="#0D0D0D" />
+    <script>
+      try {
+        var m = document.getElementById("theme-color-meta");
+        if (m)
+          m.setAttribute(
+            "content",
+            document.documentElement.classList.contains("dark")
+              ? "#0D0D0D"
+              : "#FAFAFA"
+          );
+      } catch (e) {}
+    </script>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Roshani Bhuva | Portfolio" />
+    <meta
+      property="og:description"
+      content="Roshani Bhuva — projects, skills, and experience."
+    />
+    <meta property="og:image" content="/assets/preview.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Roshani Bhuva | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Roshani Bhuva — projects, skills, and experience."
+    />
+    <meta name="twitter:image" content="/assets/preview.png" />
+    <script type="module" crossorigin src="/portfolio/assets/index-BlC0NGWy.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-Lyr6qvYL.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
