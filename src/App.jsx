@@ -1,5 +1,7 @@
 import { useLayoutEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { DISABLE_SITE_CONTEXT_MENU } from "./config/site";
+import { useSiteInteractionGuards } from "./hooks/useSiteInteractionGuards";
 import PortfolioHome from "./pages/PortfolioHome";
 import GraphicDesignCase from "./pages/GraphicDesignCase";
 
@@ -21,6 +23,8 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  useSiteInteractionGuards(DISABLE_SITE_CONTEXT_MENU);
+
   return (
     <>
       <ScrollToTop />

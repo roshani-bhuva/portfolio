@@ -54,3 +54,8 @@
     @apply mx-auto w-full max-w-6xl px-3 md:px-5 lg:max-w-7xl 2xl:max-w-[min(100%,85rem)];
   }
 }
+
+/* Applied when DISABLE_SITE_CONTEXT_MENU is true (see App.jsx). */
+html.site-guard-no-callout {
+  -webkit-touch-callout: none;
+}
