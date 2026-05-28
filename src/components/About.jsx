@@ -15,7 +15,7 @@ const EXPERIENCE = [
     role: "UI/UX & Graphic Designer",
     company: "Axire Infotech",
     location: "Ahmedabad, Gujarat",
-    period: "April 2025 – Present",
+    period: "April 2025 – October 2025",
     logo: publicAsset("/assets/experience/axire-infotech.png"),
   },
   {

@@ -1,5 +1,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
+import { MdSwipeRight } from "react-icons/md";
 import { TbPlayerPlay } from "react-icons/tb";
 import ProjectCaseHeader from "../components/project-detail/ProjectCaseHeader";
 import { publicAsset } from "../utils/publicAsset";
@@ -201,6 +203,10 @@ function VisualReelsRow() {
   const r1 = useRef(null);
   const r2 = useRef(null);
   const refs = [r0, r1, r2];
+  const wrapperRef = useRef(null);
+  const rowRef = useRef(null);
+  const dismissedRef = useRef(false);
+  const [showSwipeHint, setShowSwipeHint] = useState(false);
 
   const pauseExcept = useCallback(
     (keepIndex) => {
@@ -214,21 +220,108 @@ function VisualReelsRow() {
     [r0, r1, r2],
   );
 
+  useEffect(() => {
+    const rowEl = rowRef.current;
+    if (!rowEl) return undefined;
+
+    const onScroll = () => {
+      if (rowEl.scrollLeft > 8) {
+        dismissedRef.current = true;
+        setShowSwipeHint(false);
+      }
+    };
+
+    rowEl.addEventListener("scroll", onScroll, { passive: true });
+    return () => rowEl.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const host = wrapperRef.current;
+    if (!host) return undefined;
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry?.isIntersecting) return;
+        if (dismissedRef.current) return;
+        setShowSwipeHint(true);
+      },
+      { threshold: 0.35 },
+    );
+
+    obs.observe(host);
+    return () => obs.disconnect();
+  }, []);
+
   return (
-    <div
-      className="mt-8 flex gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0 [&::-webkit-scrollbar]:hidden"
-      role="list"
-    >
-      {VISUAL_REEL_SOURCES.map((src, i) => (
-        <div key={src} className="sm:min-w-0" role="listitem">
-          <ReelVideo
-            videoRef={refs[i]}
-            src={src}
-            label={`Visual reel ${i + 1}`}
-            onPlayPeer={() => pauseExcept(i)}
-          />
+    <div ref={wrapperRef} className="relative mt-8">
+      {showSwipeHint && (
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-20 flex items-center pr-2 sm:hidden">
+          <div
+            className="flex h-7 w-10 items-center justify-center"
+            aria-hidden
+          >
+            {/* Light-mode animated glow */}
+            <motion.span
+              className="inline-flex text-zinc-900/70 dark:hidden"
+              animate={{
+                x: [0, 7, 0],
+                opacity: [0.35, 0.95, 0.35],
+                filter: [
+                  "drop-shadow(0 6px 14px rgba(0,0,0,0.10))",
+                  "drop-shadow(0 10px 22px rgba(0,0,0,0.22))",
+                  "drop-shadow(0 6px 14px rgba(0,0,0,0.10))",
+                ],
+              }}
+              transition={{
+                duration: 1.05,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+              }}
+            >
+              <MdSwipeRight className="h-6 w-6" aria-hidden />
+            </motion.span>
+
+            {/* Dark-mode animated glow */}
+            <motion.span
+              className="hidden text-white/80 dark:inline-flex"
+              animate={{
+                x: [0, 7, 0],
+                opacity: [0.35, 0.95, 0.35],
+                filter: [
+                  "drop-shadow(0 10px 20px rgba(0,0,0,0.55))",
+                  "drop-shadow(0 14px 26px rgba(0,0,0,0.75))",
+                  "drop-shadow(0 10px 20px rgba(0,0,0,0.55))",
+                ],
+              }}
+              transition={{
+                duration: 1.05,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+              }}
+            >
+              <MdSwipeRight className="h-6 w-6" aria-hidden />
+            </motion.span>
+          </div>
         </div>
-      ))}
+      )}
+      <div
+        ref={rowRef}
+        className="flex gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:grid sm:grid-cols-3 sm:gap-4 sm:overflow-visible sm:pb-0 [&::-webkit-scrollbar]:hidden"
+        role="list"
+      >
+        {VISUAL_REEL_SOURCES.map((src, i) => (
+          <div key={src} className="sm:min-w-0" role="listitem">
+            <ReelVideo
+              videoRef={refs[i]}
+              src={src}
+              label={`Visual reel ${i + 1}`}
+              onPlayPeer={() => pauseExcept(i)}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
