@@ -18,20 +18,52 @@ const VISUAL_REEL_SOURCES = [
 
 const CREATIVE_POST_ASSETS = [
   {
-    src: publicAsset(`/assets/${encodeURIComponent("image 1.png")}`),
+    src: publicAsset(`/assets/${encodeURIComponent("post-1.png")}`),
     alt: "Social media managers at 3 AM — creative post with 3D character and thought bubble",
   },
   {
-    src: publicAsset(`/assets/${encodeURIComponent("image 2.png")}`),
-    alt: "Movie-themed branding graphic with clapperboard and headline",
+    src: publicAsset(`/assets/${encodeURIComponent("post-5.jpeg")}`),
+    alt: "Jal brand design and packaging.",
   },
   {
-    src: publicAsset(`/assets/${encodeURIComponent("image 3.png")}`),
+    src: publicAsset(`/assets/${encodeURIComponent("post-11.jpg")}`),
+    alt: "The Universe brand design.",
+  },
+  {
+    src: publicAsset(`/assets/${encodeURIComponent("post-13.jpeg")}`),
+    alt: "The Universe brand design.",
+  },
+  {
+    src: publicAsset(`/assets/${encodeURIComponent("post-6.jpeg")}`),
+    alt: "Akshar Aachar brand design and packaging.",
+  },
+  {
+    src: publicAsset(`/assets/${encodeURIComponent("post-12.jpeg")}`),
+    alt: "The Universe brand design and packaging.",
+  },
+  {
+    src: publicAsset(`/assets/${encodeURIComponent("post-3.png")}`),
     alt: "Instagram vs reality comparison creative for client expectations",
   },
   {
-    src: publicAsset(`/assets/${encodeURIComponent("image 4.png")}`),
-    alt: "Instagram algorithm humorous dialogue creative post",
+    src: publicAsset(`/assets/${encodeURIComponent("post-7.jpeg")}`),
+    alt: "Akshar Aachar brand design and packaging.",
+  },
+  {
+    src: publicAsset(`/assets/${encodeURIComponent("post-2.png")}`),
+    alt: "Movie-themed branding graphic with clapperboard and headline",
+  },
+  {
+    src: publicAsset(`/assets/${encodeURIComponent("post-8.jpeg")}`),
+    alt: "Jal brand design and packaging.",
+  },
+  {
+    src: publicAsset(`/assets/${encodeURIComponent("post-4.png")}`),
+    alt: "Social media managers at 3 AM — creative post with 3D character and thought bubble",
+  },
+  {
+    src: publicAsset(`/assets/${encodeURIComponent("post-10.jpg")}`),
+    alt: "Jal brand design and packaging.",
   },
 ];
 
@@ -48,12 +80,43 @@ const BRAND_DESIGN_ASSETS = [
     width: 1022,
     height: 735,
   },
+  {
+    src: publicAsset("/assets/brand-design-akshar-aachar.png"),
+    alt: "Akshar Aachar – Tradition in Every Bite.",
+    width: 1024,
+    height: 769,
+  },
+  {
+    src: publicAsset("/assets/brand-design-jal.jpeg"),
+    alt: "Jal brand design and packaging.",
+    width: 1024,
+    height: 769,
+  },
+  {
+    src: publicAsset("/assets/brand-design-sonik-soda.png"),
+    alt: "Jal brand design and packaging.",
+    width: 1024,
+    height: 769,
+  },
+  {
+    src: publicAsset("/assets/brand-design-the-universe.png"),
+    alt: "The Universe brand design.",
+    width: 1024,
+    height: 769,
+  },
 ];
 
 const LOGO_DESIGN_ASSETS = [
   {
     src: publicAsset("/assets/logo-trailx5.png"),
     alt: "TrailX5 wordmark — Trail and 5 with orange X mark",
+    outerClass: "min-w-0 flex-1",
+    frameClass: "h-full overflow-hidden p-0",
+    imgClass: "aspect-square w-full object-cover",
+  },
+  {
+    src: publicAsset("/assets/logo-akshar-aachar.jpeg"),
+    alt: "Akshar Aachar logo",
     outerClass: "min-w-0 flex-1",
     frameClass: "h-full overflow-hidden p-0",
     imgClass: "aspect-square w-full object-cover",
@@ -68,6 +131,27 @@ const LOGO_DESIGN_ASSETS = [
   {
     src: publicAsset("/assets/logo-akshar-agro.png"),
     alt: "Akshar Agro logo — windmill, fields, and wheat with wordmark",
+    outerClass: "min-w-0 flex-1",
+    frameClass: "h-full overflow-hidden p-0",
+    imgClass: "aspect-square w-full object-cover",
+  },
+  {
+    src: publicAsset("/assets/logo-jal.jpeg"),
+    alt: "Jal logo",
+    outerClass: "min-w-0 flex-1",
+    frameClass: "h-full overflow-hidden p-0",
+    imgClass: "aspect-square w-full object-cover",
+  },
+  {
+    src: publicAsset("/assets/logo-the-univers.jpeg"),
+    alt: "Jal logo",
+    outerClass: "min-w-0 flex-1",
+    frameClass: "h-full overflow-hidden p-0",
+    imgClass: "aspect-square w-full object-cover",
+  },
+  {
+    src: publicAsset("/assets/logo-sonik.jpeg"),
+    alt: "Jal logo",
     outerClass: "min-w-0 flex-1",
     frameClass: "h-full overflow-hidden p-0",
     imgClass: "aspect-square w-full object-cover",
@@ -379,7 +463,7 @@ export default function GraphicDesignCase() {
                       <img
                         src={asset.src}
                         alt={asset.alt}
-                        className="aspect-[4/3] h-full w-full object-cover"
+                        className="w-full h-auto block"
                         width={asset.width}
                         height={asset.height}
                         loading="lazy"
@@ -400,7 +484,7 @@ export default function GraphicDesignCase() {
                   Social-first layouts and campaign frames—crafted to stop the
                   scroll while staying true to the brand voice.
                 </p>
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {CREATIVE_POST_ASSETS.map((asset, i) => (
                     <div
                       key={`${asset.src}-${i}`}
@@ -430,11 +514,11 @@ export default function GraphicDesignCase() {
                   Marks and lockups that read clearly at any size and feel
                   unmistakably yours.
                 </p>
-                <div className="mt-8 flex flex-row flex-nowrap items-stretch gap-3 sm:gap-4">
+                <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
                   {LOGO_DESIGN_ASSETS.map((logo, i) => (
                     <div
                       key={`${logo.src}-${i}`}
-                      className={`flex min-h-0 min-w-0 flex-col overflow-hidden rounded-2xl border border-foreground/10 shadow-sm dark:shadow-none ${logo.outerClass} ${logo.frameClass}`}
+                      className={`flex min-h-0 min-w-0 flex-col overflow-hidden rounded-2xl border border-foreground/10 shadow-sm dark:shadow-none ${logo.frameClass}`}
                     >
                       <img
                         src={logo.src}

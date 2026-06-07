@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { TbArrowUpRight } from "react-icons/tb";
 import {
   HiOutlineMenu,
   HiOutlineMoon,
   HiOutlineSun,
   HiX,
 } from "react-icons/hi";
+import { FaWhatsapp } from "react-icons/fa6";
 import { applyTheme } from "../utils/theme";
 
 const NAV_LINKS = [
@@ -110,19 +110,20 @@ export default function Navbar() {
               <HiOutlineMoon aria-hidden />
             )}
           </motion.button>
-          <motion.button
-            type="button"
-            onClick={() => scrollToSection("contact")}
+          <motion.a
+            href="https://wa.me/8849542563"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden items-center gap-2 rounded-full border border-foreground/12 bg-elevated px-3 py-2 text-[14px] font-medium text-foreground/95 transition hover:border-accent/40 hover:bg-foreground/[0.04] sm:inline-flex lg:px-4 lg:text-base"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
             <span className="hidden lg:inline">Available for Opportunity</span>
             <span className="lg:hidden">Available</span>
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent/15 text-accent">
-              <TbArrowUpRight className="h-4 w-4" aria-hidden />
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#25D366]/15 text-[#25D366]">
+              <FaWhatsapp className="h-4.5 w-4.5" aria-hidden />
             </span>
-          </motion.button>
+          </motion.a>
           <motion.button
             type="button"
             className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-foreground/10 bg-foreground/[0.05] text-xl text-foreground md:hidden"
@@ -158,15 +159,16 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-            <motion.button
-              type="button"
-              onClick={() => scrollToSection("contact")}
+            <motion.a
+              href="https://wa.me/918849542563"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl border border-foreground/12 bg-elevated px-4 py-3 text-sm font-semibold text-foreground"
               whileTap={{ scale: 0.99 }}
             >
               Available for Opportunity
-              <TbArrowUpRight className="h-5 w-5 text-accent" />
-            </motion.button>
+              <FaWhatsapp className="h-5 w-5 text-[#25D366]" />
+            </motion.a>
           </motion.div>
         )}
       </AnimatePresence>

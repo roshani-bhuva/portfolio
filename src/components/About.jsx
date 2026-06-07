@@ -12,7 +12,7 @@ const STATS = [
 const EXPERIENCE = [
   {
     id: 1,
-    role: "UI/UX & Graphic Designer",
+    role: "Graphic & UI/UX Designer",
     company: "Axire Infotech",
     location: "Ahmedabad, Gujarat",
     period: "April 2025 – October 2025",
@@ -20,7 +20,7 @@ const EXPERIENCE = [
   },
   {
     id: 2,
-    role: "UI/UX & Graphic Designer",
+    role: "Graphic Designer",
     company: "Rupiya Finnovations Private Limited",
     location: "Ahmedabad, Gujarat",
     period: "Mar 2024 – Mar 2025",
@@ -124,8 +124,8 @@ export default function About() {
             id="about-heading"
             className="max-w-3xl text-[2rem] font-bold leading-tight tracking-tight text-foreground sm:text-[2.375rem] lg:text-[2.775rem] lg:leading-[1.12]"
           >
-            Designing Clarity into{" "}
-            <span className="text-accent">Every Click</span>
+            Designing Identity, Graphic Systems &amp;{" "}
+            <span className="text-accent">Digital Clarity</span>
           </h2>
         </motion.div>
 
@@ -140,20 +140,21 @@ export default function About() {
           >
             <div className="min-w-0 flex flex-1 flex-col justify-center">
               <p className="text-[1.375rem] font-semibold text-foreground sm:text-2xl">
-                I&apos;m Roshani{" "}
-                <span className="text-accent">UI/UX, Graphic designer</span>{" "}
+                I&apos;m Roshani, a{" "}
+                <span className="text-accent">Graphic &amp; UI/UX Designer</span>{" "}
                 based in Ahmedabad
               </p>
               <p className="mt-5 text-lg leading-relaxed text-muted sm:text-xl">
-                With two plus years of experience in design, I focus on
-                user-centered digital products—from research and branding to
-                polished UI. I combine visual craft with clear UX so every
-                screen feels intentional, accessible, and on brand.
+                With two plus years of experience in design, I specialize in
+                brand identity, marketing visuals, and user-centered interfaces.
+                I combine strategic graphic design with intuitive UI/UX, ensuring every
+                design element – from a brand logo to a web interface – is visually
+                stunning, accessible, and memorable.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-muted sm:text-xl">
-                I collaborate closely with teams to turn fuzzy ideas into
-                testable flows, design systems, and visuals that scale—without
-                losing the human touch that makes interfaces memorable.
+                I collaborate closely with teams to turn brand visions and fuzzy
+                product ideas into cohesive design systems, marketing campaigns, and
+                polished interfaces that scale.
               </p>
             </div>
 
@@ -253,8 +254,8 @@ export default function About() {
                 Tools I use
               </h3>
               <p className="mt-2 text-base text-muted">
-                From wireframes to high-fidelity UI and handoff—my everyday
-                stack for design and collaboration.
+                From branding guides and creative poster assets to high-fidelity UI
+                and vector illustrations—my everyday toolkit.
               </p>
               <div className="mt-10 grid grid-cols-3 gap-3 sm:gap-4">
                 {TOOLS.map((tool) => {

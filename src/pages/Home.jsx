@@ -23,11 +23,11 @@ export default function Home() {
             </p>
             <h1 className="text-balance text-[calc(1.85rem+2px)] font-bold leading-[1.1] tracking-tight sm:text-[calc(2.3rem+2px)] sm:leading-[1.08] md:text-[calc(2.85rem+2px)] lg:text-[calc(3.4rem+2px)] lg:leading-[1.06] xl:text-[calc(3.85rem+2px)] xl:leading-[1.05] 2xl:text-[calc(4.25rem+2px)] 2xl:leading-[1.03]">
               <span className="block text-foreground">
-                A UI/UX &amp; Graphics Designer crafting
+                A Graphic &amp; UI/UX Designer crafting
               </span>
               <span className="mt-1 block sm:mt-1.5">
                 <span className="inline-block max-sm:whitespace-normal sm:whitespace-nowrap">
-                  <span className="text-foreground">seamless </span>
+                  <span className="text-foreground">visual identities &amp; </span>
                   <span className="text-accent">digital experiences.</span>
                 </span>
               </span>
@@ -53,10 +53,10 @@ export default function Home() {
             className="flex flex-col justify-center lg:col-span-7"
           >
             <p className="text-[calc(0.9375rem+6px)] leading-relaxed text-muted sm:text-[calc(1rem+6px)] lg:text-[calc(1.02rem+6px)] lg:leading-[1.65]">
-              With two plus years of experience in design, I focus on user-centered
-              digital products—from research and branding to polished UI. I
-              combine visual craft with clear UX so every screen feels
-              intentional, accessible, and on brand.
+              With two plus years of experience in design, I focus on brand
+              identity, creative marketing graphics, and user-centered digital products.
+              I combine graphic craft with intuitive UI/UX design to create cohesive,
+              striking visual identities across both digital and physical touchpoints.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-7 sm:gap-4">

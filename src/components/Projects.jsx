@@ -9,10 +9,19 @@ const MotionLink = motion.create(Link);
 
 const projects = [
   {
+    id: "graphic-design",
+    title: "Graphic Design Projects",
+    description:
+      "I design banners, posters, logos, and reels that communicate ideas and strengthen brand identity.",
+    image: publicAsset("/assets/graphic-design-project.png"),
+    internalPath: "/work/graphic-design",
+    tag: "Graphic Design",
+  },
+  {
     id: "zaibatsu",
     title: "zaibatsutechnology",
     description:
-      "A UK-based agency that offers bespoke AI & Digital Solutions with over 5+ years of driving business growth with the help of development & marketing solutions.",
+      "A UK-based digital agency. Designed branding visuals, modern user interfaces, and marketing collateral to drive business growth.",
     image: publicAsset("/assets/zaibatsu-project.png"),
     link: "https://zaibatsutechnology.co.uk/",
     tag: "Website Design",
@@ -21,7 +30,7 @@ const projects = [
     id: "trailx5",
     title: "Trailx5",
     description:
-      "As a top digital marketing company, we craft customized strategies designed to boost your ROI while enhancing your brand’s growth and visibility.",
+      "A top digital marketing company. Designed the brand identity, logo, print brochure, and website UI/UX to enhance growth and visibility.",
     image: publicAsset("/assets/trailx5-project.png"),
     link: "https://trailx5.com/",
     tag: "Website Design",
@@ -30,19 +39,10 @@ const projects = [
     id: "rupiya",
     title: "rupiya.app",
     description:
-      "Rupiya.app helps farmers with tools like satellite monitoring, soil testing, and expert guidance. It also offers easy access to agricultural loans for growth.",
+      "An agricultural platform. Created the logo brand identity, illustration graphics, and website design to make complex farming tools accessible.",
     image: publicAsset("/assets/rupiya-project.jpg"),
     link: "https://rupiya.app/",
     tag: "Website Design",
-  },
-  {
-    id: "graphic-design",
-    title: "Graphic Design Projects",
-    description:
-      "I design banners, posters, logos, and reels that communicate ideas and strengthen brand identity.",
-    image: publicAsset("/assets/graphic-design-project.png"),
-    internalPath: "/work/graphic-design",
-    tag: "Graphic Design",
   },
 ];
 

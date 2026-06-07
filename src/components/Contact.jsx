@@ -248,8 +248,8 @@ export default function Contact() {
             </div>
 
             <p className="text-muted text-sm/7 lg:text-base/7 mt-5 lg:mt-6 max-w-lg">
-              I seek to push the limits of creativity to create high-engaging,
-              user-friendly, and memorable interactive experiences.
+              I push the boundaries of visual design and user experience to craft
+              memorable brand identities, stunning graphics, and intuitive digital products.
             </p>
 
             <div className="font-medium text-sm lg:text-lg flex flex-col mt-8 gap-4">

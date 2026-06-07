@@ -54,7 +54,7 @@ export default function Footer() {
               </span>
             </button>
             <p className="text-sm leading-relaxed text-muted">
-              Portfolio — interfaces, motion, and thoughtful details.
+              Portfolio — branding, graphics, interfaces, and thoughtful details.
             </p>
           </motion.div>
 

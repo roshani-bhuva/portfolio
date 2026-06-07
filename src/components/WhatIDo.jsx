@@ -1,37 +1,37 @@
 import { motion } from "framer-motion";
 import {
+  HiOutlineSparkles,
+  HiOutlinePhoto,
+  HiOutlineBookOpen,
   HiOutlineSwatch,
-  HiOutlineSquares2X2,
-  HiOutlinePencilSquare,
-  HiOutlineUserGroup,
   HiOutlineDevicePhoneMobile,
-  HiOutlineComputerDesktop,
+  HiOutlineSquares2X2,
 } from "react-icons/hi2";
 
 const SERVICES = [
+  {
+    title: "Brand Identity & Logos",
+    icon: HiOutlineSparkles,
+  },
+  {
+    title: "Marketing & Creative Posts",
+    icon: HiOutlinePhoto,
+  },
+  {
+    title: "Packaging & Print Design",
+    icon: HiOutlineBookOpen,
+  },
   {
     title: "UI/UX Design",
     icon: HiOutlineSwatch,
   },
   {
-    title: "Design Systems",
-    icon: HiOutlineSquares2X2,
-  },
-  {
-    title: "Wireframing & Prototyping",
-    icon: HiOutlinePencilSquare,
-  },
-  {
-    title: "User Research",
-    icon: HiOutlineUserGroup,
-  },
-  {
-    title: "Mobile App Design",
+    title: "Web & Mobile App Design",
     icon: HiOutlineDevicePhoneMobile,
   },
   {
-    title: "Web App Design",
-    icon: HiOutlineComputerDesktop,
+    title: "Design Systems",
+    icon: HiOutlineSquares2X2,
   },
 ];
 
