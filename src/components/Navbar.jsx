@@ -111,16 +111,16 @@ export default function Navbar() {
             )}
           </motion.button>
           <motion.a
-            href="https://wa.me/8849542563"
+            href="https://wa.me/918849542563"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-full border border-foreground/12 bg-elevated px-3 py-2 text-[14px] font-medium text-foreground/95 transition hover:border-accent/40 hover:bg-foreground/[0.04] sm:inline-flex lg:px-4 lg:text-base"
+            className="flex items-center justify-center rounded-full border border-foreground/10 bg-foreground/[0.05] transition hover:border-[#25D366]/40 hover:bg-foreground/[0.04] h-10 w-10 sm:h-auto sm:w-auto sm:gap-2 sm:px-3 sm:py-2 lg:px-4 text-[14px] font-medium text-foreground/95"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <span className="hidden lg:inline">Available for Opportunity</span>
-            <span className="lg:hidden">Available</span>
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#25D366]/15 text-[#25D366]">
+            <span className="hidden lg:inline whitespace-nowrap">Available for Opportunity</span>
+            <span className="hidden sm:inline lg:hidden whitespace-nowrap">Available</span>
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#25D366]/15 text-[#25D366]">
               <FaWhatsapp className="h-4.5 w-4.5" aria-hidden />
             </span>
           </motion.a>

@@ -1,8 +1,8 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { TbArrowLeft, TbDownload } from "react-icons/tb";
-import { publicAsset } from "../../utils/publicAsset";
+import { TbArrowLeft } from "react-icons/tb";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const NAV_ITEMS = [
   { id: "brand-design", label: "Brand Design", mobileLabel: "Design" },
@@ -67,23 +67,19 @@ export default function ProjectCaseHeader() {
         </div>
 
         <motion.a
-          href={publicAsset("/Roshani_Bhuva_Resume.pdf")}
-          download="Roshani_Bhuva_Resume.pdf"
+          href="https://wa.me/918849542563"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="inline-flex shrink-0 flex-row items-center gap-2 rounded-full border border-foreground/12 bg-elevated px-2.5 py-2 text-left text-[11px] font-semibold leading-snug text-foreground/95 shadow-inner transition hover:border-orange-500/50 hover:bg-foreground/[0.04] sm:gap-2.5 sm:px-4 sm:text-[14px] sm:leading-normal dark:hover:border-orange-500/60 dark:hover:bg-black/40"
+          className="inline-flex shrink-0 items-center justify-center rounded-full border border-foreground/10 bg-foreground/[0.05] transition hover:border-[#25D366]/50 hover:bg-foreground/[0.04] dark:hover:border-[#25D366]/60 dark:hover:bg-black/40 shadow-inner h-9 w-9 sm:h-auto sm:w-auto sm:gap-2.5 sm:px-4 sm:py-2 text-left text-[14px] font-semibold leading-normal text-foreground/95"
         >
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-500 text-zinc-950 shadow-[0_0_16px_rgba(249,115,22,0.45)] dark:text-black dark:shadow-[0_0_16px_rgba(249,115,22,0.55)]">
-            <TbDownload
-              className="h-3.5 w-3.5"
-              strokeWidth={2.25}
-              aria-hidden
-            />
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_0_16px_rgba(37,211,102,0.45)] dark:shadow-[0_0_16px_rgba(37,211,102,0.55)]">
+            <FaWhatsapp className="h-4.5 w-4.5" aria-hidden />
           </span>
           <span className="min-w-0 whitespace-nowrap hidden sm:inline">
-            Download CV
+            Available for Opportunities
           </span>
-          <span className="sr-only sm:not-sr-only">Download CV</span>
         </motion.a>
       </nav>
     </header>
