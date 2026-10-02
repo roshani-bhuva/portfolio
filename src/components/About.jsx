@@ -15,7 +15,7 @@ const EXPERIENCE = [
     role: "Graphic & UI/UX Designer",
     company: "Axire Infotech",
     location: "Ahmedabad, Gujarat",
-    period: "April 2025 – October 2025",
+    period: "April 2025 – Present",
     logo: publicAsset("/assets/experience/axire-infotech.png"),
   },
   {
@@ -24,7 +24,7 @@ const EXPERIENCE = [
     company: "Rupiya Finnovations Private Limited",
     location: "Ahmedabad, Gujarat",
     period: "Mar 2024 – Mar 2025",
-    logo: publicAsset("/assets/experience/rupiya-finnovations.png"),
+    logo: publicAsset("/assets/experience/rupiya-finnovations.webp"),
   },
   {
     id: 3,
@@ -39,37 +39,37 @@ const EXPERIENCE = [
 const TOOLS = [
   {
     name: "Figma",
-    logo: publicAsset("/assets/tools/figma.png"),
+    logo: publicAsset("/assets/tools/figma.webp"),
     cardClass:
       "rounded-xl border-[#A259FF]/30 bg-[#A259FF]/[0.12] hover:border-[#A259FF]/45",
   },
   {
     name: "Illustrator",
-    logo: publicAsset("/assets/tools/illustrator.png"),
+    logo: publicAsset("/assets/tools/illustrator.webp"),
     cardClass:
       "rounded-xl border-[#FF9A00]/30 bg-[#FF9A00]/[0.12] hover:border-[#FF9A00]/45",
   },
   {
     name: "Photoshop",
-    logo: publicAsset("/assets/tools/photoshop.png"),
+    logo: publicAsset("/assets/tools/photoshop.webp"),
     cardClass:
       "rounded-xl border-[#31A8FF]/30 bg-[#31A8FF]/[0.12] hover:border-[#31A8FF]/45",
   },
   {
     name: "Canva",
-    logo: publicAsset("/assets/tools/canva.png"),
+    logo: publicAsset("/assets/tools/canva.webp"),
     cardClass:
       "rounded-xl border-[#00C4CC]/30 bg-[#00C4CC]/[0.12] hover:border-[#00C4CC]/45",
   },
   {
     name: "Lovable",
-    logo: publicAsset("/assets/tools/lovable.png"),
+    logo: publicAsset("/assets/tools/lovable.webp"),
     cardClass:
       "rounded-xl border-[#F472B6]/30 bg-[#F472B6]/[0.12] hover:border-[#F472B6]/45",
   },
   {
     name: "Claude",
-    logo: publicAsset("/assets/tools/claude.png"),
+    logo: publicAsset("/assets/tools/claude.webp"),
     cardClass:
       "rounded-xl border-[#D97757]/30 bg-[#D97757]/[0.12] hover:border-[#D97757]/45",
   },
@@ -89,7 +89,7 @@ const TOOLS = [
   },
   {
     name: "Copilot",
-    logo: publicAsset("/assets/tools/copilot.png"),
+    logo: publicAsset("/assets/tools/copilot.webp"),
     logoClassName: "rounded-xl",
     cardClass:
       "border-[#6366f1]/30 bg-[#6366f1]/[0.1] hover:border-[#6366f1]/45",
@@ -141,20 +141,22 @@ export default function About() {
             <div className="min-w-0 flex flex-1 flex-col justify-center">
               <p className="text-[1.375rem] font-semibold text-foreground sm:text-2xl">
                 I&apos;m Roshani, a{" "}
-                <span className="text-accent">Graphic &amp; UI/UX Designer</span>{" "}
+                <span className="text-accent">
+                  Graphic &amp; UI/UX Designer
+                </span>{" "}
                 based in Ahmedabad
               </p>
               <p className="mt-5 text-lg leading-relaxed text-muted sm:text-xl">
                 With two plus years of experience in design, I specialize in
                 brand identity, marketing visuals, and user-centered interfaces.
-                I combine strategic graphic design with intuitive UI/UX, ensuring every
-                design element – from a brand logo to a web interface – is visually
-                stunning, accessible, and memorable.
+                I combine strategic graphic design with intuitive UI/UX,
+                ensuring every design element – from a brand logo to a web
+                interface – is visually stunning, accessible, and memorable.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-muted sm:text-xl">
                 I collaborate closely with teams to turn brand visions and fuzzy
-                product ideas into cohesive design systems, marketing campaigns, and
-                polished interfaces that scale.
+                product ideas into cohesive design systems, marketing campaigns,
+                and polished interfaces that scale.
               </p>
             </div>
 
@@ -254,8 +256,8 @@ export default function About() {
                 Tools I use
               </h3>
               <p className="mt-2 text-base text-muted">
-                From branding guides and creative poster assets to high-fidelity UI
-                and vector illustrations—my everyday toolkit.
+                From branding guides and creative poster assets to high-fidelity
+                UI and vector illustrations—my everyday toolkit.
               </p>
               <div className="mt-10 grid grid-cols-3 gap-3 sm:gap-4">
                 {TOOLS.map((tool) => {

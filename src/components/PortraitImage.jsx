@@ -21,7 +21,7 @@ export default function PortraitImage({ className = "", compact = false }) {
       <div className={[aboutCropFrame, className].filter(Boolean).join(" ")}>
         <img
           className={aboutCropImage}
-          src={publicAsset("/assets/hero-portrait.png")}
+          src={publicAsset("/assets/hero-portrait.webp")}
           alt="Designer portrait"
         />
       </div>
@@ -31,7 +31,7 @@ export default function PortraitImage({ className = "", compact = false }) {
   return (
     <img
       className={[portraitImageClassName, className].filter(Boolean).join(" ")}
-      src={publicAsset("/assets/hero-portrait.png")}
+      src={publicAsset("/assets/hero-portrait.webp")}
       alt="Designer portrait"
     />
   );

@@ -13,7 +13,7 @@ const projects = [
     title: "Graphic Design Projects",
     description:
       "I design banners, posters, logos, and reels that communicate ideas and strengthen brand identity.",
-    image: publicAsset("/assets/graphic-design-project.png"),
+    image: publicAsset("/assets/graphic-design-project.webp"),
     internalPath: "/work/graphic-design",
     tag: "Graphic Design",
   },
@@ -22,7 +22,7 @@ const projects = [
     title: "zaibatsutechnology",
     description:
       "A UK-based digital agency. Designed branding visuals, modern user interfaces, and marketing collateral to drive business growth.",
-    image: publicAsset("/assets/zaibatsu-project.png"),
+    image: publicAsset("/assets/zaibatsu-project.webp"),
     link: "https://zaibatsutechnology.co.uk/",
     tag: "Website Design",
   },
@@ -31,7 +31,7 @@ const projects = [
     title: "Trailx5",
     description:
       "A top digital marketing company. Designed the brand identity, logo, print brochure, and website UI/UX to enhance growth and visibility.",
-    image: publicAsset("/assets/trailx5-project.png"),
+    image: publicAsset("/assets/trailx5-project.webp"),
     link: "https://trailx5.com/",
     tag: "Website Design",
   },
@@ -40,7 +40,7 @@ const projects = [
     title: "rupiya.app",
     description:
       "An agricultural platform. Created the logo brand identity, illustration graphics, and website design to make complex farming tools accessible.",
-    image: publicAsset("/assets/rupiya-project.jpg"),
+    image: publicAsset("/assets/rupiya-project.webp"),
     link: "https://rupiya.app/",
     tag: "Website Design",
   },

@@ -5,9 +5,11 @@ import { TbArrowLeft } from "react-icons/tb";
 import { FaWhatsapp } from "react-icons/fa6";
 
 const NAV_ITEMS = [
-  { id: "brand-design", label: "Brand Design", mobileLabel: "Design" },
   { id: "creative-post", label: "Creative Post", mobileLabel: "Post" },
+  { id: "carousel-design", label: "Carousel Design", mobileLabel: "Slides" },
   { id: "logo-design", label: "Logo Design", mobileLabel: "Logo" },
+  { id: "mockup-design", label: "Mockups", mobileLabel: "Mockup" },
+  { id: "brand-design", label: "Brand Design", mobileLabel: "Brand" },
   { id: "visual-reel", label: "Visual Reel", mobileLabel: "Reel" },
 ];
 
@@ -52,16 +54,16 @@ export default function ProjectCaseHeader() {
           />
         </motion.button>
 
-        <div className="grid min-w-0 flex-1 grid-cols-4 gap-1 px-1 sm:flex sm:items-center sm:justify-start sm:gap-0.5 md:gap-1">
+        <div className="flex min-w-0 flex-1 items-center justify-between overflow-x-auto px-0.5 [-ms-overflow-style:none] [scrollbar-width:none] sm:justify-start sm:gap-0.5 sm:overflow-visible md:gap-1 [&::-webkit-scrollbar]:hidden">
           {NAV_ITEMS.map((item) => (
             <button
               key={item.id}
               type="button"
               onClick={() => scrollToId(item.id)}
-              className="min-w-0 rounded-full px-1.5 py-2 text-[11px] font-semibold text-foreground/85 transition-colors hover:bg-foreground/[0.06] hover:text-orange-600 dark:hover:text-orange-500 sm:px-3 sm:py-2 sm:text-[15px] sm:font-medium"
+              className="shrink-0 whitespace-nowrap rounded-full px-1 py-2 text-[11px] font-semibold text-foreground/85 transition-colors hover:bg-foreground/[0.06] hover:text-orange-600 dark:hover:text-orange-500 sm:px-3 sm:py-2 sm:text-[15px] sm:font-medium"
             >
-              <span className="truncate sm:hidden">{item.mobileLabel}</span>
-              <span className="hidden sm:inline">{item.label}</span>
+              <span className="truncate lg:hidden">{item.mobileLabel}</span>
+              <span className="hidden lg:inline">{item.label}</span>
             </button>
           ))}
         </div>
@@ -72,12 +74,12 @@ export default function ProjectCaseHeader() {
           rel="noopener noreferrer"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="inline-flex shrink-0 items-center justify-center rounded-full border border-foreground/10 bg-foreground/[0.05] transition hover:border-[#25D366]/50 hover:bg-foreground/[0.04] dark:hover:border-[#25D366]/60 dark:hover:bg-black/40 shadow-inner h-9 w-9 sm:h-auto sm:w-auto sm:gap-2.5 sm:px-4 sm:py-2 text-left text-[14px] font-semibold leading-normal text-foreground/95"
+          className="inline-flex shrink-0 items-center justify-center rounded-full border border-foreground/10 bg-foreground/[0.05] transition hover:border-[#25D366]/50 hover:bg-foreground/[0.04] dark:hover:border-[#25D366]/60 dark:hover:bg-black/40 shadow-inner h-9 w-9 xl:h-auto xl:w-auto xl:gap-2.5 xl:px-4 xl:py-2 text-left text-[14px] font-semibold leading-normal text-foreground/95"
         >
           <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_0_16px_rgba(37,211,102,0.45)] dark:shadow-[0_0_16px_rgba(37,211,102,0.55)]">
             <FaWhatsapp className="h-4.5 w-4.5" aria-hidden />
           </span>
-          <span className="min-w-0 whitespace-nowrap hidden sm:inline">
+          <span className="min-w-0 whitespace-nowrap hidden xl:inline">
             Available for Opportunities
           </span>
         </motion.a>
