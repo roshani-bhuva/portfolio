@@ -6,6 +6,7 @@ const SCROLL_OFFSET = 96;
 const FOOTER_LINKS = [
   { id: "what-i-do", label: "What I do" },
   { id: "about", label: "About" },
+  { id: "design", label: "Design" },
   { id: "projects", label: "Work" },
   { id: "contact", label: "Connect" },
 ];

@@ -1,11 +1,10 @@
 import { useLayoutEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Navigate, Routes, Route, useLocation } from "react-router-dom";
 import { DISABLE_SITE_CONTEXT_MENU } from "./config/site";
 import { useSiteInteractionGuards } from "./hooks/useSiteInteractionGuards";
 import PortfolioHome from "./pages/PortfolioHome";
-import GraphicDesignCase from "./pages/GraphicDesignCase";
 
-/** Reset scroll on client-side navigation (e.g. Work → Graphic Design case). */
+/** Reset scroll on client-side navigation. */
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -30,7 +29,11 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<PortfolioHome />} />
-        <Route path="/work/graphic-design" element={<GraphicDesignCase />} />
+        {/* Design work now lives on the home page; keep old links working. */}
+        <Route
+          path="/work/graphic-design"
+          element={<Navigate to="/#design" replace />}
+        />
       </Routes>
     </>
   );

@@ -59,3 +59,46 @@
 html.site-guard-no-callout {
   -webkit-touch-callout: none;
 }
+
+/* RB loader: shimmer sweep, turning ring, and breathing monogram. */
+@keyframes rb-shimmer {
+  0% { background-position: -150% 0; }
+  100% { background-position: 250% 0; }
+}
+@keyframes rb-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes rb-breathe {
+  0%, 100% { opacity: 0.55; transform: scale(0.96); }
+  50% { opacity: 1; transform: scale(1); }
+}
+.rb-loader-surface {
+  background-image: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(192, 132, 252, 0.14) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: rb-shimmer 1.6s ease-in-out infinite;
+}
+.rb-loader-ring {
+  background: conic-gradient(from 0deg, transparent 0 55%, #c084fc 80%, #e879f9 100%);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1.5px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1.5px));
+  animation: rb-spin 1.1s linear infinite;
+}
+.rb-loader-mark {
+  background: linear-gradient(135deg, #c084fc, #e879f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rb-breathe 1.6s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rb-loader-surface,
+  .rb-loader-ring,
+  .rb-loader-mark {
+    animation: none;
+  }
+}

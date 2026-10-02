@@ -9,15 +9,6 @@ const MotionLink = motion.create(Link);
 
 const projects = [
   {
-    id: "graphic-design",
-    title: "Graphic Design Projects",
-    description:
-      "I design banners, posters, logos, and reels that communicate ideas and strengthen brand identity.",
-    image: publicAsset("/assets/graphic-design-project.webp"),
-    internalPath: "/work/graphic-design",
-    tag: "Graphic Design",
-  },
-  {
     id: "zaibatsu",
     title: "zaibatsutechnology",
     description:
@@ -122,7 +113,7 @@ export default function Projects() {
           My work, your <span className="text-accent">next inspiration.</span>
         </h2>
 
-        <div className="mx-auto mt-12 grid w-full max-w-4xl gap-6 sm:gap-7 lg:mt-14 lg:max-w-5xl lg:grid-cols-2 lg:gap-x-5 lg:gap-y-7 xl:max-w-6xl">
+        <div className="mx-auto mt-12 grid w-full max-w-4xl gap-6 sm:gap-7 lg:mt-14 lg:max-w-6xl lg:grid-cols-3 lg:gap-5 xl:max-w-7xl">
           {projects.map((project, index) => {
             const images =
               project.images || (project.image ? [project.image] : []);
@@ -151,8 +142,8 @@ export default function Projects() {
 
             const inner = (
               <div className="flex h-full min-h-0 flex-1 flex-col gap-3.5 p-4 sm:gap-4 sm:p-5 md:p-6">
-                <div className="group/media relative aspect-[2/1] w-full min-h-[180px] shrink-0 overflow-hidden rounded-xl border border-foreground/10 bg-elevated sm:min-h-[222px] sm:rounded-2xl sm:aspect-[21/8] lg:aspect-[11/4] lg:min-h-[238px]">
-                  <span className="absolute left-3 top-3 z-10 rounded-full border border-accent/25 bg-card/90 px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-accent shadow-sm backdrop-blur-sm sm:left-4 sm:top-4 sm:px-3.5 sm:py-2 sm:text-[13px]">
+                <div className="group/media relative aspect-[2/1] w-full min-h-[180px] shrink-0 overflow-hidden rounded-xl border border-foreground/10 bg-elevated sm:min-h-[222px] sm:rounded-2xl sm:aspect-[21/8] lg:aspect-[16/10] lg:min-h-0">
+                  <span className="absolute left-3 top-3 z-10 rounded-full border border-accent/25 bg-card/90 px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-accent shadow-sm backdrop-blur-sm sm:left-4 sm:top-4 sm:px-3.5 sm:py-2 sm:text-[13px] lg:left-3 lg:top-3 lg:px-2.5 lg:py-1 lg:text-[11px]">
                     {project.tag}
                   </span>
                   <div className="absolute inset-0 transition-[filter] duration-300 group-hover/media:brightness-[1.05]">
@@ -163,11 +154,11 @@ export default function Projects() {
                 <div className="flex min-h-0 flex-1 flex-col">
                   <h3
                     id={`project-title-${project.id}`}
-                    className="text-xl font-bold tracking-tight text-foreground sm:text-[1.375rem] lg:text-[26px]"
+                    className="text-xl font-bold tracking-tight text-foreground sm:text-[1.375rem] lg:text-[1.375rem] xl:text-2xl"
                   >
                     {project.title}
                   </h3>
-                  <p className="mt-2 text-base leading-relaxed text-muted sm:text-[1.0625rem] lg:text-lg">
+                  <p className="mt-2 text-base leading-relaxed text-muted sm:text-[1.0625rem] lg:text-base">
                     {project.description}
                   </p>
                   <div className="mt-auto flex justify-end pt-3 sm:pt-4">

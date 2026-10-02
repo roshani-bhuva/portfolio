@@ -1,3 +1,4 @@
+import { Children, useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import {
   FiBookmark,
@@ -24,6 +25,7 @@ import {
   FiUser,
 } from "react-icons/fi";
 import { publicAsset } from "../../utils/publicAsset";
+import { RBLoader } from "../design/RBLoader";
 
 /*
  * Mockups are drawn with CSS instead of photo templates, so they stay sharp at
@@ -925,13 +927,41 @@ SplashScreen.propTypes = {
 };
 
 function Scene({ title, caption, background, wide = false, children }) {
+  const ref = useRef(null);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    const imgs = [...(ref.current?.querySelectorAll("img") ?? [])];
+    const pending = imgs.filter((img) => !(img.complete && img.naturalWidth > 0));
+    if (!pending.length) {
+      setReady(true);
+      return undefined;
+    }
+    let left = pending.length;
+    const done = () => {
+      left -= 1;
+      if (left <= 0) setReady(true);
+    };
+    pending.forEach((img) => {
+      img.addEventListener("load", done, { once: true });
+      img.addEventListener("error", done, { once: true });
+    });
+    return () =>
+      pending.forEach((img) => {
+        img.removeEventListener("load", done);
+        img.removeEventListener("error", done);
+      });
+  }, []);
+
   return (
     <figure className={`min-w-0 ${wide ? "sm:col-span-2" : ""}`}>
       <div
+        ref={ref}
         className={`relative flex items-center justify-center overflow-hidden rounded-xl border border-foreground/10 ${wide ? "aspect-[4/3] [--k:1.3] sm:aspect-[16/9] sm:[--k:1]" : "aspect-[4/3]"}`}
         style={{ containerType: "inline-size", background }}
       >
         {children}
+        <RBLoader visible={!ready} className="z-30" />
       </div>
       <figcaption className="mt-3 px-0.5">
         <p className="text-base font-semibold text-foreground sm:text-lg">
@@ -999,9 +1029,15 @@ const AMBLI = {
   caption: "Own your dream office at Ambli. From ₹53 lacs.",
 };
 
-export default function MockupScenes() {
-  return (
-    <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-8">
+/**
+ * Scene order (for `only`): 0 Shreeji kit · 1 GreenSense posts · 2 Ambli ·
+ * 3 Universe stories · 4 TravelTekPro · 5 EDRA poster · 6 Svitch ·
+ * 7 Shreeji billboard · 8 Shreeji cards · 9 EDRA magazine · 10 Elite reels ·
+ * 11 Universe roll-ups · 12 GreenSense app.
+ */
+export default function MockupScenes({ only }) {
+  const all = (
+    <>
       <Scene
         wide
         title="Shreeji Elevator Services"
@@ -1325,6 +1361,17 @@ export default function MockupScenes() {
           />
         </Phone>
       </Scene>
+    </>
+  );
+  const scenes = Children.toArray(all.props.children);
+  const shown = only ? only.map((i) => scenes[i]).filter(Boolean) : scenes;
+  return (
+    <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-8">
+      {shown}
     </div>
   );
 }
+
+MockupScenes.propTypes = {
+  only: PropTypes.arrayOf(PropTypes.number),
+};
